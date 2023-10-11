@@ -1,8 +1,6 @@
-# Samples for ASP.NET Core 6.0, 7.0 and 8.0 RC 1 (502)
+# Samples for ASP.NET Core 6.0 (445)
 
-- Samples for ASP.NET Core **8.0 RC 1** is available [here](/projects/.net8) (39).
-- Samples for ASP.NET Core **7.0** is available [here](/projects/.net7) (45).
-- Samples for ASP.NET Core **8.0 Preview 6** using EdgeDB.NET is [here](https://github.com/edgedb/edgedb-net).
+Samples for ASP.NET Core 7.0 is available [here](/projects/.net7) (42).
 
 Greetings from Cairo, Egypt. You can [sponsor](https://github.com/sponsors/dodyg) this project [here](https://github.com/sponsors/dodyg). 
 
@@ -23,14 +21,13 @@ Greetings from Cairo, Egypt. You can [sponsor](https://github.com/sponsors/dodyg
 | [Diagnostics](/projects/diagnostics)                            | 6   |                                                                              |
 | [Endpoint Routing](/projects/endpoint-routing)                  | 32  |                                                                              |
 | [Email](/projects/mailkit)                                      | 2   |                                                                              |
-| [Elsa Workflow](/projects/elsa)                                 | 14  |                                                                              |
 | [Features](/projects/features)                                  | 11  |                                                                              |
 | [Generic Hosting](/projects/generic-host)                       | 9   |                                                                              |
 | [gRPC](/projects/grpc) (including grpc-Web)                     | 12  |                                                                              |
 | [Health Check](/projects/health-check)                          | 6   |                                                                              |
 | [IHttpClientFactory](/projects/httpclientfactory)               | 4   |                                                                              |
 | [IHostedService](/projects/ihosted-service)                     | 2   |                                                                              |
-| [Logging](/projects/logging)                                    | 4   |                                                                              |
+| [Logging](/projects/logging)                                    | 3   |                                                                              |
 | [Localization and Globalization](/projects/localization)        | 6   |                                                                              |
 | [Middleware](/projects/middleware)                              | 14  |                                                                              |
 | [Mini Apps](/projects/mini)                                     | 2   |                                                                              |
