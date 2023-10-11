@@ -1,23 +1,31 @@
-public class Startup
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
+
+namespace PracticalAspNetCore
 {
-    public void Configure(IApplicationBuilder app)
+    public class Startup
     {
-        app.Run(async context =>
+        public void Configure(IApplicationBuilder app)
         {
-            // Duplicate the code below and write more messages. Save and refresh your browser to see the result.
-            await context.Response.WriteAsync("Hello world. Make sure you run this app using 'dotnet watch run'.");
-        });
+            app.Run(async context =>
+            {
+                // Duplicate the code below and write more messages. Save and refresh your browser to see the result.
+                await context.Response.WriteAsync("Hello world. Make sure you run this app using 'dotnet watch run'.");
+            });
+        }
     }
-}
 
-public class Program
-{
-    public static void Main(string[] args) =>
-        CreateHostBuilder(args).Build().Run();
+    public class Program
+    {
+        public static void Main(string[] args) =>
+            CreateHostBuilder(args).Build().Run();
 
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-                webBuilder.UseStartup<Startup>()
-            );
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                    webBuilder.UseStartup<Startup>()
+                );
+    }
 }

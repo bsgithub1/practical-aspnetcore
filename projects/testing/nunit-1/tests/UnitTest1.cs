@@ -1,39 +1,44 @@
 using NUnit.Framework;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Testing;
 using System.Net;
 
-public class Tests
+namespace Tests
 {
-    private WebApplicationFactory<Startup> _factory;
-    private HttpClient _client;
-
-    [OneTimeSetUp]
-    public void OneTimeSetUp()
+    public class Tests
     {
-        _factory = new WebApplicationFactory<Startup>();
-    }
+        private WebApplicationFactory<PracticalAspNetCore.Startup> _factory;
+        private HttpClient _client;
 
-    [SetUp]
-    public void Setup()
-    {
-        _client = _factory.CreateClient();
-    }
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            _factory = new WebApplicationFactory<PracticalAspNetCore.Startup>();
+        }
 
-    [Test]
-    public async Task ReturnsTextStartingWithHelloWorld()
-    {
-        var result = await _client.GetStringAsync("/");
+        [SetUp]
+        public void Setup()
+        {
+            _client = _factory.CreateClient();
+        }
 
-        Assert.That(result, Does.StartWith("Hello world"));
-    }
+        [Test]
+        public async Task ReturnsTextStartingWithHelloWorld()
+        {
+            var result = await _client.GetStringAsync("/");
 
-    [Test]
-    public async Task Returns200()
-    {
-        using var request = new HttpRequestMessage(HttpMethod.Get, "/");
+            Assert.That(result, Does.StartWith("Hello world"));
+        }
 
-        using var response = await _client.SendAsync(request);
+        [Test]
+        public async Task Returns200()
+        {
+            using var request = new HttpRequestMessage(HttpMethod.Get, "/");
 
-        Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            using var response = await _client.SendAsync(request);
+
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        }
     }
 }
