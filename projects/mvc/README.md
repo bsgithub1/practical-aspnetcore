@@ -1,16 +1,19 @@
 # MVC (47)
 
 | Sections                                                       |     |
-| -------------------------------------------------------------- | --- |
-| [MVC - Localization](/projects/mvc/localization)               | 10  |
-| [MVC - Routing](/projects/mvc/routing)                         | 9   |
-| [MVC - Razor Class Library](/projects/mvc/razor-class-library) | 3   |
-| [MVC - Tag Helpers](/projects/mvc/tag-helper)                  | 7   |
-| [MVC - View Component](/projects/mvc/view-component)           | 4   |
+|----------------------------------------------------------------|-----|
+| [MVC - Localization](/projects/mvc/localization)               | (10) |
+| [MVC - Routing](/projects/mvc/routing)                         | (9) |
+| [MVC - Razor Class Library](/projects/mvc/razor-class-library) | (3) |
+| [MVC - Tag Helpers](/projects/mvc/tag-helper)                  | (7) |
+| [MVC - View Component](/projects/mvc/view-component)           | (4) |
 |                                                                | 33  |
 
-* [Hello World](/projects/mvc/hello-world)
-  A "hello world" MVC app.
+* [Hello World Minimalistic](/projects/mvc/hello-world) (1)
+  This is the most basic hello world you can do using ASP.NET MVC. It uses `services.AddMvcCore()` with [behavior compatibility](https://blogs.msdn.microsoft.com/webdev/2018/02/27/introducing-compatibility-version-in-mvc/) set to `2.1` and with manually configured route.
+
+  You shouldn't use this configuration for your typical ASP.NET MVC Core application (it does not support Razor, etc). This is just an example on how to do it with the least amount of functionality and configuration. You can find a discussion about `services.AddMvcCore()` [here](https://offering.solutions/blog/articles/2017/02/07/difference-between-addmvc-addmvcore/).
+
 
 ## Authentication/Authorization (1)
 
@@ -58,7 +61,11 @@
     Makes it easy to returns JSON content from an action.
  
 
-## Formatters (1)
+## Formatters (2)
+
+* [Using Utf8Json as JSON Formatter](/projects/mvc/utf8json-formatter)
+
+  Use the super fast [Ut8Json](https://github.com/neuecc/Utf8Json) JSON serialization library instead of the default one. This project requires `utf8json` and `Utf8Json.AspNetCoreMvcFormatter` packages.
 
 * [Returning XML Response](/projects/mvc/mvc-output-xml)
 
@@ -82,10 +89,3 @@
 
     This is a very rudimentary RSS output formatter. It's valid but it does not do much other than providing RSS items.
   
-## Newtonsoft.Json (1)
-
-  * [Using Newtonsoft.Json](/projects/mvc/newtonsoft-json)
-
-    Use `Microsoft.AspNetCore.Mvc.NewtonsoftJson` to have MVC use `Newtonsoft.Json` instead of `System.Text.Json`.
-
-dotnet6
